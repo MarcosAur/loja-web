@@ -12,7 +12,7 @@
     
 </body>
 <footer>
-    <div class="container-fluid">
+    <div class="container-fluid bg-secondary">
         <div class="row">
             <div class="col-4 footer-center-item">
                 <ul class="list-footer">
@@ -40,6 +40,11 @@
                     <li class="item-footer">c</li>
                     <li class="item-footer">d</li>
                 </ul>
+            </div>
+        </div>
+        <div class="row footer-center-item">
+            <div class="col">
+                <p>Copyright</p>
             </div>
         </div>
     </div>
