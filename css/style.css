@@ -17,3 +17,24 @@
     right: 40%;
     left: auto;
 }
+
+.footer-center-item{
+    text-align: center;
+}
+
+.list-footer {
+    display: inline-block;
+    margin: 3em;
+    margin-left: 5em;
+    padding: 5px
+}
+
+.item-footer {
+    display: block;
+    margin: 5px 5px 5px 5px;
+}
+
+.title-list {
+    display: block;
+    text-align: center;
+}
