@@ -24,17 +24,34 @@
 
 .list-footer {
     display: inline-block;
-    margin: 3em;
-    margin-left: 5em;
+    margin: 2em;
+    margin-left: 3em;
     padding: 5px
 }
 
 .item-footer {
     display: block;
     margin: 5px 5px 5px 5px;
+    color: #e6e6e6;
+    text-decoration: none;
+}
+
+.item-footer:hover{
+    color: #e6e6e6;
+    font-size: 15px;
+    text-decoration: underline;
 }
 
 .title-list {
     display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #e6e6e6;
     text-align: center;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #e6e6e6;
+    font-style: italic;
 }

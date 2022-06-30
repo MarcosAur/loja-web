@@ -14,37 +14,46 @@
 <footer>
     <div class="container-fluid bg-secondary">
         <div class="row">
-            <div class="col-4 footer-center-item">
+            <div class="col-3 footer-center-item">
                 <ul class="list-footer">
                     <li class="title-list">Teste</li>
-                    <li class="item-footer">a</li>
-                    <li class="item-footer">b</li>
-                    <li class="item-footer">c</li>
-                    <li class="item-footer">d</li>
+                    <a href=""><li class="item-footer">a</li></a>
+                    <a href=""><li class="item-footer">b</li></a>
+                    <a href=""><li class="item-footer">c</li></a>
+                    <a href=""><li class="item-footer">d</li></a>
                 </ul>
             </div>
-            <div class="col-4 footer-center-item">
+            <div class="col-3 footer-center-item">
                 <ul class="list-footer">
                     <li class="title-list">Teste</li>
-                    <li class="item-footer">a</li>
-                    <li class="item-footer">b</li>
-                    <li class="item-footer">c</li>
-                    <li class="item-footer">d</li>
+                    <a href=""><li class="item-footer">a</li></a>
+                    <a href=""><li class="item-footer">b</li></a>
+                    <a href=""><li class="item-footer">c</li></a>
+                    <a href=""><li class="item-footer">d</li></a>
                 </ul>
             </div>
-            <div class="col-4 footer-center-item">
+            <div class="col-3 footer-center-item">
                 <ul class="list-footer">
                     <li class="title-list">Teste</li>
-                    <li class="item-footer">a</li>
-                    <li class="item-footer">b</li>
-                    <li class="item-footer">c</li>
-                    <li class="item-footer">d</li>
+                    <a href=""><li class="item-footer">a</li></a>
+                    <a href=""><li class="item-footer">b</li></a>
+                    <a href=""><li class="item-footer">c</li></a>
+                    <a href=""><li class="item-footer">d</li></a>
+                </ul>
+            </div>
+            <div class="col-3 footer-center-item">
+                <ul class="list-footer">
+                    <li class="title-list">Teste</li>
+                    <a href=""><li class="item-footer">a</li></a>
+                    <a href=""><li class="item-footer">b</li></a>
+                    <a href=""><li class="item-footer">c</li></a>
+                    <a href=""><li class="item-footer">d</li></a>
                 </ul>
             </div>
         </div>
         <div class="row footer-center-item">
             <div class="col">
-                <p>Copyright</p>
+                <p class="copyright">Copyright Renan e Marquim</p>
             </div>
         </div>
     </div>
