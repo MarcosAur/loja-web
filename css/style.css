@@ -55,3 +55,16 @@
     color: #e6e6e6;
     font-style: italic;
 }
+
+/* Código referente a tela de login */
+
+.login-position {
+    position: relative;
+    top: 12rem;
+    left: 400px;
+    right: auto;
+}
+
+.login-obs {
+    opacity: 80%;
+}
