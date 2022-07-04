@@ -13,10 +13,10 @@
 </body>
 <footer>
     <div class="container-fluid bg-secondary">
-        <div class="row">
+        <div class="row img-footer">
             <div class="col-3 footer-center-item">
                 <ul class="list-footer">
-                    <li class="title-list">Teste</li>
+                    <li class="title-list">Sobre</li>
                     <a href=""><li class="item-footer">a</li></a>
                     <a href=""><li class="item-footer">b</li></a>
                     <a href=""><li class="item-footer">c</li></a>
@@ -25,7 +25,7 @@
             </div>
             <div class="col-3 footer-center-item">
                 <ul class="list-footer">
-                    <li class="title-list">Teste</li>
+                    <li class="title-list">Departamentos</li>
                     <a href=""><li class="item-footer">a</li></a>
                     <a href=""><li class="item-footer">b</li></a>
                     <a href=""><li class="item-footer">c</li></a>
@@ -34,7 +34,7 @@
             </div>
             <div class="col-3 footer-center-item">
                 <ul class="list-footer">
-                    <li class="title-list">Teste</li>
+                    <li class="title-list">Departamentos</li>
                     <a href=""><li class="item-footer">a</li></a>
                     <a href=""><li class="item-footer">b</li></a>
                     <a href=""><li class="item-footer">c</li></a>
