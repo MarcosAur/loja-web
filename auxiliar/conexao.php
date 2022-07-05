@@ -28,6 +28,28 @@ function getAll($table_name){
     return $dataReceived;
 }
 
+//Retorna um usuário baseado em um login e uma senha informadas
+function findUser($email, $senha){
+    $conn = createConn();
+    $sql_query = "SELECT * 
+                  FROM cliente
+                  WHERE email = '$email' AND senha = '$senha'";
+
+    $result = mysqli_query($conn, $sql_query);
+    $rows = mysqli_fetch_assoc($result);
+    return $rows;
+}
+
+//Cadastra um usuário no banco de dados
+function createUser($nome_usuario, $email, $senha){
+    $conn = createConn();
+    $sql_query = "INSERT INTO cliente (nome_usuario, email, senha)
+                  VALUES
+                  ('$nome_usuario', '$email', '$senha');";
+    $result = mysqli_real_query($conn, $sql_query);
+
+    return $result;
+}
 
 
 ?>

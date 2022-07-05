@@ -1,3 +1,18 @@
+<?php
+include_once '../auxiliar/validacao.php';
+if(isset($_POST['email']) and isset($_POST['senha']) ){
+  $logado = validarLogin($_POST['email'], $_POST['senha']);
+  if ($logado) {
+    header("Location: /loja-web/partes/index.php");
+    
+  }else{
+    unset($_POST['email']);
+    unset($_POST['senha']);
+    header("Location: /loja-web/partes/tela-login.php");
+  }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +27,15 @@
   <div class="container">
     <div class="row">
       <div class="col-4 login-position">
-        <form>
+        <form method='POST'>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label text-white">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+              <input type="email" name='email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
               <div id="emailHelp" class="form-text text-white login-obs">Você nunca deve compartilhar seu e-mail com ninguém</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label text-white">Senha</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+              <input type="password" name='senha' class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
             </div>
             <button type="submit" class="btn btn-warning">Login</button>
         </form>
