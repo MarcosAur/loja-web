@@ -49,7 +49,7 @@
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Desconectar</a></li>
+                    <li><a class="dropdown-item" href="../auxiliar/validacao.php?desconectar=true">Desconectar</a></li>
                   </ul>
                 </li>
               </ul>

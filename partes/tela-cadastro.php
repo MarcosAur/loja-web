@@ -1,14 +1,13 @@
 <?php
 include_once '../auxiliar/validacao.php';
 if(isset($_POST['email']) and isset($_POST['senha']) and isset($_POST['username'])){
-  $cadastrado = createUser($_POST['username'], $_POST['email'], $_POST['senha']);
+  $cadastrado = cadastrarUsuario($_POST['username'], $_POST['email'], $_POST['senha']);
   if ($cadastrado) {
-    header("Location: /loja-web/partes/index.php");
+    echo "<meta http-equiv='refresh' content='0; url=/loja-web/partes/tela-login.php'/>";
   }else {
     unset($_POST['email']);
     unset($_POST['senha']);
     unset($_POST['username']);
-    header("Location: /loja-web/partes/tela-cadastro.php");
   }
 }
 
