@@ -1,9 +1,17 @@
 <?php
     if (isset($_GET['desconectar'])) {
-        desconectarUser();
-        echo "<script>alert('Usuário deslogado')</script>";
-        echo "<meta http-equiv='refresh' content='0; url=/loja-web/partes/index.php'/>";
+        $sessaoAtiva = verificarSessao();
+        if($sessaoAtiva){
+            desconectarUser();
+            echo "<script>alert('Usuário deslogado')</script>";
+            echo "<meta http-equiv='refresh' content='0; url=/loja-web/partes/index.php'/>";
+        }else {
+            echo "<script>alert('Não existe uma sessão ativa')</script>";
+            echo "<meta http-equiv='refresh' content='0; url=/loja-web/partes/index.php'/>";
+        }
+        
     }
+
     include 'conexao.php';
     function validarLogin($email, $senha){
         $sessaoAtiva = verificarSessao();
@@ -26,7 +34,6 @@
 
     function cadastrarUsuario($nome_usuario, $email, $senha){
         $sessaoAtiva = verificarSessao();
-        echo "<script>alert($sessaoAtiva)</script>";
         if (!$sessaoAtiva) {
             $cadastrado = createUser($nome_usuario, $email, $senha);
             if ($cadastrado) {

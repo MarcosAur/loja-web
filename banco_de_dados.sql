@@ -54,7 +54,7 @@ Inicio do Insert de Produtos
 */
 INSERT INTO produto(nome, descricao, img, id_categorias, valor)
 VALUES 
-('Fire TV Stick','>Fire TV com Alexa: aproveite streaming rápido e em Full HD. Vem com o novo Controle Remoto Lite por Voz com Alexa (sem controles de TV).','https://m.media-amazon.com/images/I/61rK6en2IdL._AC_SX679_.jpg','1,3',236.55)
+('Fire TV Stick','>Fire TV com Alexa: aproveite streaming rápido e em Full HD. Vem com o novo Controle Remoto Lite por Voz com Alexa (sem controles de TV).','https://m.media-amazon.com/images/I/61rK6en2IdL._AC_SX679_.jpg','1,3',236.55);
 
 INSERT INTO produto(nome, descricao, img, id_categorias, valor) 
 VALUES 

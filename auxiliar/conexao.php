@@ -9,7 +9,7 @@ function createConn(){
     $host = "localhost";
     $db_name = "loja_web";
     $username = "root";
-    $password = "";
+    $password = "1234";
 
     $conn = mysqli_connect($host, $username, $password, $db_name);
 
