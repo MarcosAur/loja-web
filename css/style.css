@@ -60,11 +60,12 @@
 
 .login-position {
     position: relative;
-    top: 12rem;
-    left: 400px;
+    display: inline;
+    left: 380px;
     right: auto;
 }
 
 .login-obs {
     opacity: 80%;
 }
+
