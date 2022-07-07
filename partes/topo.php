@@ -14,6 +14,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <img class="logo-teste" src="../img/android-chrome-192x192.png" width="80px">
           <form class="d-flex search-position" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-warning" type="submit">Search</button>

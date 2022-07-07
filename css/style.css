@@ -69,3 +69,8 @@
     opacity: 80%;
 }
 
+.logo-teste {
+    position: absolute;
+    top: auto;
+    left: 4em;
+}
