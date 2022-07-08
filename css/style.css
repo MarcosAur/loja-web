@@ -74,3 +74,15 @@
     top: auto;
     left: 4em;
 }
+
+.botao-menu {
+    margin: 2em;
+    color: #ffffff !important;
+    font-size: 45px;
+}
+
+.icon-social{ 
+    font-size: 25px;
+    color: #ffffff;
+    margin: 6px 6px 6px 6px;
+}
