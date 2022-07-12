@@ -76,8 +76,8 @@
 					</ul>
 				</div> <!-- Div fechando o off canvas body -->
 			</div>
-			<div class="col-xs-12 col-sm-4 mt-3 mb-3 ">
-				<form class="d-flex search-position  me-5 mt-1" role="search">
+			<div class="col-xs-12 col-sm-4 mt-3 mb-3">
+				<form class="d-flex align-items-center justify-content-center me-5 mt-1" role="search">
 					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-warning" type="submit">Search</button>
 				</form>

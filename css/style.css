@@ -13,7 +13,7 @@
 }
 
 .search-position {
-    position: fixed;
+    position: relative;
     right: 40%;
     left: auto;
 }
@@ -76,9 +76,11 @@
 }
 
 .botao-menu {
-    margin: 2em;
+    position: relative;
+    display: block;
     color: #ffffff !important;
-    font-size: 45px;
+    font-size: 40px;
+    width: 50px;
 }
 
 .icon-social{ 

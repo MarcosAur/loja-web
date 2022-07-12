@@ -23,6 +23,10 @@ if(isset($_POST['email']) and isset($_POST['senha']) and isset($_POST['username'
     <title>Tela de Cadastro</title>
 </head>
 <body class="bg-secondary">
+    <div class="jumbotron text-white mt-3 mb-3">
+      <h1 class="display-4" style="text-align: center;">Olá, seja bem vindo!</h1>
+      <p class="lead" style="text-align: center;">Faça seu cadastro para conseguir se conectar e ter acesso aos nossos produtos</p>
+    </div>
     <div class="container">
         <div class="row">
           <div class="col-4 login-position">
