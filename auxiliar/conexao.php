@@ -8,8 +8,8 @@ troca nos parâmetros de login no banco.
 function createConn(){
     $host = "localhost";
     $db_name = "loja_web";
-    $username = "root";
-    $password = "";
+    $username = "teste";
+    $password = "1234";
 
     $conn = mysqli_connect($host, $username, $password, $db_name);
 
@@ -46,6 +46,16 @@ function createUser($nome_usuario, $email, $senha){
     $sql_query = "INSERT INTO cliente (nome_usuario, email, senha)
                   VALUES
                   ('$nome_usuario', '$email', '$senha');";
+    $result = mysqli_real_query($conn, $sql_query);
+
+    return $result;
+}
+
+function cadastrarBanner($nome, $link, $nova_janela){
+    $conn = createConn();
+    $sql_query = "INSERT INTO banner (nome, link_destino, nova_janela)
+                  VALUES
+                  ('$nome', '$link', '$nova_janela');";
     $result = mysqli_real_query($conn, $sql_query);
 
     return $result;

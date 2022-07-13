@@ -4,14 +4,14 @@ USE loja_web;
 
 CREATE TABLE cliente(
 	id INT PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(70),
+    email VARCHAR(70) UNIQUE,
     senha VARCHAR(16),
-    nome_usuario VARCHAR(30)
+    nome_usuario VARCHAR(30) UNIQUE
 );
 
 CREATE TABLE usuario(
 	id INT PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(70),
+    email VARCHAR(70) UNIQUE,
     senha VARCHAR(16)
 );
 
@@ -67,5 +67,17 @@ VALUES
 ('Harry Potter e o enigma do príncipe','>Voldemort e dos Comensais da Morte, seus seguidores, cresce mais a cada dia, em meio à batalha entre o bem e o mal. A onda de terror provocada pelo Lorde das Trevas estaria afetando, até mesmo, o mundo dos trouxas','https://images-na.ssl-images-amazon.com/images/I/81yFIh1yoZL.jpg','2,3,4',48.90),
 ('Harry Potter e as relíquias da morte','Harry Potter e as relíquias da morte de J.K. Rowling, é o sétimo e último livro da série. Voldemorte está cada vez mais forte e Harry Potter precisa encontrar e aniquilar as Horcruxes para enfraquecer-lo e poder enfrentálo.','https://images-na.ssl-images-amazon.com/images/I/81rvO7xcJOL.jpg','2','30.00');
 
+CREATE TABLE banner(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) UNIQUE,
+    link_destino VARCHAR(150),
+    nova_janela char(1)
+);
 
+CREATE TABLE exibi_banner(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    data_inicio DATE,
+    data_final DATE,
+    banners VARCHAR(100) /* Salvar dados no formato nome:ordem*/
+);
 
