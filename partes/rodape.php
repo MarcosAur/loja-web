@@ -13,7 +13,7 @@
 </body>
 <footer>
     <div class="container-fluid bg-secondary fixed-bottom">
-        <div class="row img-footer">
+        <div class="row">
             <div class="col-3 footer-center-item">
                 <ul class="list-footer">
                     <li class="title-list">Sobre</li>
