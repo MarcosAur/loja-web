@@ -71,13 +71,8 @@ CREATE TABLE banner(
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) UNIQUE,
     link_destino VARCHAR(150),
-    nova_janela char(1)
-);
-
-CREATE TABLE exibi_banner(
-	id INT PRIMARY KEY AUTO_INCREMENT,
+    nova_janela char(1),
+    sequencia VARCHAR(2),
     data_inicio DATE,
-    data_final DATE,
-    banners VARCHAR(100) /* Salvar dados no formato nome:ordem*/
+    data_final DATE
 );
-

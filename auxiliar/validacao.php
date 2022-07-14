@@ -62,18 +62,16 @@
 
     function salvarBanner($nome, $arquivo){
         $extensao = explode('.',$arquivo['name']);
-
-            
         $extensao = $extensao[count($extensao) - 1];
+
         //Validação do tipo de arquivo.
         if ($extensao == "jpg" or $extensao == "png") {
             $nome_do_arquivo = $nome . "." . $extensao;
             $path = "../img/banners/$nome_do_arquivo";
             $movido = move_uploaded_file($arquivo['tmp_name'],$path);
-
-
             if ($movido) {
-                echo "<script>alert('Banner cadastrado')</script>";    
+                echo "<script>alert('Banner cadastrado')</script>"; 
+                return $path;  
             }else {
                 echo "<script>alert('Banner não cadastrado')</script>";
             }
