@@ -53,7 +53,7 @@ function createUser($nome_usuario, $email, $senha){
 
 function cadastrarBanner($nome, $link, $nova_janela, $sequencia, $path, $data_inicio, $data_fim){
     $conn = createConn();
-    $sql_query = "INSERT INTO banner (nome, link_destino, nova_janela, sequencia, caminho_para_imagem, data_inicio, data_fim)
+    $sql_query = "INSERT INTO banner (nome, link_destino, nova_janela, sequencia, caminho_para_imagem, data_inicio, data_final)
                   VALUES
                   ('$nome', '$link', '$nova_janela', '$sequencia', '$path', '$data_inicio', '$data_fim');";
     $result = mysqli_real_query($conn, $sql_query);

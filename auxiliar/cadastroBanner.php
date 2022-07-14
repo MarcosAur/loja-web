@@ -11,12 +11,9 @@
     include "./validacao.php";
         if(isset($_POST['enviado'])){
             $arquivo = $_FILES['arquivo'];
-            //echo ;
-            
             $path = salvarBanner(str_replace("/","",$arquivo['tmp_name']), $arquivo);
             cadastrarBanner($_POST['nome'],$_POST['link'], $_POST['nova_janela'], $_POST['sequencia'], $path, $_POST['data_inicio'], $_POST['data_fim'] );
             unset($_POST['enviado']);
-            
         }
     ?>
     <form action="" method="post" enctype="multipart/form-data">
