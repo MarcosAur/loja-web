@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container-sm">
-        <div class="row mt-5">
+        <div class="row mt-5 mb-5">
             <div class="col">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -36,10 +36,10 @@
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="row mt-5 mb-5 ms-5 me-3">
-            <div class="col-xs-12 col-sm-4">
-                <div class="card" style="width: 18rem;">
+        </div> <!-- Fim da div row banner -->
+        <div class="row mx-auto align-items-center">
+            <div class="col-xs-12 col-sm-4 mx-auto">
+                <div class="card text-align-center" style="width: 18rem;">
                     <img src="https://via.placeholder.com/300x250/4682B4%20?Text=Digital.com" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -48,8 +48,8 @@
                     </div>
                 </div> <!-- fim da div card - 1 -->
             </div> <!-- Fim da div col card - 1 --> 
-            <div class="col-xs-12 col-sm-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-xs-12 col-sm-4 mx-auto">
+                <div class="card text-align-center" style="width: 18rem;">
                     <img src="https://via.placeholder.com/300x250/4682B4%20?Text=Digital.com" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -58,8 +58,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-xs-12 col-sm-4 mx-auto">
+                <div class="card text-align-center" style="width: 18rem;">
                     <img src="https://via.placeholder.com/300x250/4682B4%20?Text=Digital.com" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
