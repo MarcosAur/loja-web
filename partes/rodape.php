@@ -17,28 +17,28 @@
             <div class="col-3 footer-center-item">
                 <ul class="list-footer">
                     <li class="title-list">Sobre</li>
-                    <a href=""><li class="item-footer">a</li></a>
-                    <a href=""><li class="item-footer">b</li></a>
-                    <a href=""><li class="item-footer">c</li></a>
-                    <a href=""><li class="item-footer">d</li></a>
+                    <a href=""><li class="item-footer">Quem somos?</li></a>
+                    <a href=""><li class="item-footer">Endereço</li></a>
+                    <a href=""><li class="item-footer">Área de atuação</li></a>
+                    <a href=""><li class="item-footer">Empresas parceiras</li></a>
                 </ul>
             </div>
             <div class="col-3 footer-center-item">
                 <ul class="list-footer">
                     <li class="title-list">Departamentos</li>
-                    <a href=""><li class="item-footer">a</li></a>
-                    <a href=""><li class="item-footer">b</li></a>
-                    <a href=""><li class="item-footer">c</li></a>
-                    <a href=""><li class="item-footer">d</li></a>
+                    <a href=""><li class="item-footer">Eletrodomésticos</li></a>
+                    <a href=""><li class="item-footer">Tecnologia</li></a>
+                    <a href=""><li class="item-footer">Livros</li></a>
+                    <a href=""><li class="item-footer">Bebidas</li></a>
                 </ul>
             </div>
             <div class="col-3 footer-center-item">
                 <ul class="list-footer">
                     <li class="title-list">Departamentos</li>
-                    <a href=""><li class="item-footer">a</li></a>
-                    <a href=""><li class="item-footer">b</li></a>
-                    <a href=""><li class="item-footer">c</li></a>
-                    <a href=""><li class="item-footer">d</li></a>
+                    <a href=""><li class="item-footer">Beleza e Perfumes</li></a>
+                    <a href=""><li class="item-footer">Moda</li></a>
+                    <a href=""><li class="item-footer">Relógio</li></a>
+                    <a href=""><li class="item-footer">Acessorios de moda</li></a>
                 </ul>
             </div>
             <div class="col-3 footer-center-item">
