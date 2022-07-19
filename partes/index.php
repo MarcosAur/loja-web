@@ -19,7 +19,7 @@
                     include '../auxiliar/conexao.php';
                     $banners = getAll("banner");
                     foreach ($banners as $banner) {
-                        $path = $banner[5];
+                        $path = $banner[4];
                         echo "<div class='carousel-item active'>
                                 <img src='$path' class='d-block w-100' alt='...'>
                               </div>";

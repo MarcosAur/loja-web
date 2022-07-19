@@ -69,10 +69,11 @@ VALUES
 
 CREATE TABLE banner(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(50) UNIQUE,
-    link_destino VARCHAR(150),
-    nova_janela char(1),
-    sequencia VARCHAR(2),
-    data_inicio DATE,
-    data_final DATE
+    nome VARCHAR(50) UNIQUE, /* editavel */
+    link_destino VARCHAR(150), /* editavel */
+    nova_janela char(1), /* editavel */
+    caminho_para_imagem VARCHAR(150), /* editavel */
+    sequencia VARCHAR(2), /* editavel */
+    data_inicio DATE, /* editavel */
+    data_final DATE /* editavel */
 );

@@ -8,7 +8,7 @@ troca nos parâmetros de login no banco.
 function createConn(){
     $host = "localhost";
     $db_name = "loja_web";
-    $username = "usuario";
+    $username = "teste";
     $password = "1234";
 
     $conn = mysqli_connect($host, $username, $password, $db_name);
@@ -51,11 +51,34 @@ function createUser($nome_usuario, $email, $senha){
     return $result;
 }
 
+//Cadastra um banner no banco com os dados repassados no formulário pelo usuário
 function cadastrarBanner($nome, $link, $nova_janela, $sequencia, $path, $data_inicio, $data_fim){
     $conn = createConn();
     $sql_query = "INSERT INTO banner (nome, link_destino, nova_janela, sequencia, caminho_para_imagem, data_inicio, data_final)
                   VALUES
                   ('$nome', '$link', '$nova_janela', '$sequencia', '$path', '$data_inicio', '$data_fim');";
+    $result = mysqli_real_query($conn, $sql_query);
+
+    return $result;
+}
+
+//Busca um banner por id no banco e retorna um array associativo com os dados do banner caso exista
+function findBanner($id){
+    $conn = createConn();
+    $sql_query = "SELECT * 
+                  FROM banner
+                  WHERE id = '$id';";
+
+    $result = mysqli_query($conn, $sql_query);
+    $data = mysqli_fetch_assoc($result);
+
+    return $data;
+}
+
+function deletarBanner($id){
+    $conn = createConn();
+    $sql_query = "DELETE FROM banner WHERE id = '$id';" ;
+
     $result = mysqli_real_query($conn, $sql_query);
 
     return $result;

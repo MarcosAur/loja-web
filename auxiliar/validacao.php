@@ -75,7 +75,6 @@
             }else {
                 echo "<script>alert('Banner não cadastrado')</script>";
             }
-            
         }else {
             echo "<script>alert('Extensão não permitida. Permitidas: .png, .jpg')</script>";
         }
