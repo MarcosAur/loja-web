@@ -83,4 +83,15 @@ function deletarBanner($id){
 
     return $result;
 }
+
+function updateBanner($id, $nome, $link, $nova_janela, $sequencia, $path, $data_inicio, $data_fim){
+    $conn = createConn();
+    $sql_query = "UPDATE banner SET nome = '$nome', link_destino = '$link', nova_janela = '$nova_janela',
+                  caminho_para_imagem = '$path', sequencia = '$sequencia', data_inicio = '$data_inicio',
+                  data_final = '$data_fim'
+                  WHERE id = $id; ";
+    $result = mysqli_real_query($conn, $sql_query);
+
+    return $result;
+}
 ?>
