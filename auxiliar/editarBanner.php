@@ -123,12 +123,13 @@
         <input name="enviado" type="submit" value="Enviar Dados">
     </form>
     <br>
-    <a href="/loja-web/partes/visualizarBanners.php"><button>View Banners</button></a>
+    <a href="/partes/visualizarBanners.php"><button>View Banners</button></a>
 </body>
 </html>
 
 
 <!-- 
-    To-Do: Criar o formulário equivalente ao de criação de banner, porém vai precisar de um
-    input hidden para salvar o id do banner.
+    To-Do: Validar a data de inicio e fim
+    To-Do: Formatar exibição data 
+    To-Do: 
  -->

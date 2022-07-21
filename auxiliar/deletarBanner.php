@@ -27,13 +27,7 @@ if (!isset($_GET['id'])) {
     }else{
         echo "<script> alert('Banner não existe no sistema');</script>";
     }
-    mudarDePagina('/loja-web/partes/visualizarBanners.php');
-
-
-    /*
-    echo "<script> alert('Banner Deletado');</script>";
-    mudarDePagina('/partes/visualizarBanners.html');
-    */
+    mudarDePagina('/partes/visualizarBanners.php');
 }
 
 ?>
