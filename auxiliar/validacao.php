@@ -1,4 +1,5 @@
 <?php
+include "/auxiliar/mostrarMensagem.php";
     if (isset($_GET['desconectar'])) {
         $sessaoAtiva = verificarSessao();
         if($sessaoAtiva){
@@ -69,14 +70,17 @@
             $nome_do_arquivo = $nome . "." . $extensao;
             $path = "../img/banners/$nome_do_arquivo";
             $movido = move_uploaded_file($arquivo['tmp_name'],$path);
-            if ($movido) {
-                echo "<script>alert('Banner cadastrado')</script>"; 
-                return $path;  
-            }else {
-                echo "<script>alert('Banner não cadastrado')</script>";
+            /*
+            Caso o arquivo não tenha sido adicionado na pasta img/banners/: Retornará um erro
+            Caso tenha sido adicionado: Retornará o path do arquivo para salvar no Banco
+            */
+            if ($movido){
+                return $path;
+            }else{
+                return false;
             }
         }else {
-            echo "<script>alert('Extensão não permitida. Permitidas: .png, .jpg')</script>";
+            alert("Extensão não permitida. Permitidas: .png, .jpg");
         }
     }
 ?>

@@ -94,4 +94,18 @@ function updateBanner($id, $nome, $link, $nova_janela, $sequencia, $path, $data_
 
     return $result;
 }
+
+function showBanners(){
+    $conn = createConn();
+
+    $sql_query = "SELECT *
+                  FROM banner
+                  WHERE data_inicio <= CURRENT_DATE AND data_final >= CURRENT_DATE
+                  ORDER BY sequencia ASC;"; // Exibe os banners na sequencia ascendente e dentro do prazo de validade
+
+    $result = mysqli_query($conn, $sql_query);
+
+    $dataReceived = mysqli_fetch_all($result);
+    return $dataReceived;
+}
 ?>

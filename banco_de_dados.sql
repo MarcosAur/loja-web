@@ -70,7 +70,7 @@ VALUES
 CREATE TABLE banner(
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) UNIQUE, /* editavel */
-    link_destino VARCHAR(150), /* editavel */
+    link_destino VARCHAR(500), /* editavel */
     nova_janela char(1), /* editavel */
     caminho_para_imagem VARCHAR(150), /* editavel */
     sequencia VARCHAR(2), /* editavel */

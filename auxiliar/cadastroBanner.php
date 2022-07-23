@@ -11,12 +11,41 @@
 <body>
     <?php
     include "./validacao.php";
+    include_once "../utilitarios/mostrarMensagem.php";
+    include_once "../utilitarios/redirecionar.php";
         if(isset($_POST['enviado'])){
             $arquivo = $_FILES['arquivo'];
             $path = salvarBanner(str_replace("/","",$arquivo['tmp_name']), $arquivo);
-            cadastrarBanner($_POST['nome'],$_POST['link'], $_POST['nova_janela'], $_POST['sequencia'], $path, $_POST['data_inicio'], $_POST['data_fim'] );
+
+            if(gettype($path) == "boolean"){ //Erro caso o a imagem não subir no upload
+                alert("Erro ao cadastrar banner no servidor.");
+                mudarDePagina("../partes/visualizarBanners.php");
+                die();
+            }
+
+
+            if($_POST['data_fim'] > getdate()){
+                alert("Caiu nesse if fml");
+                die();
+            }
+
+
+            if ($_POST['data_inicio'] >= $_POST['data_fim']) {
+                alert("Data de inicio maior que a data de fim");
+                mudarDePagina("../partes/visualizarBanners.php");
+                die();
+            }
+            $banner_cadastrado = cadastrarBanner($_POST['nome'],$_POST['link'], $_POST['nova_janela'], $_POST['sequencia'], $path, $_POST['data_inicio'], $_POST['data_fim'] );
+            if (!$banner_cadastrado) { //Erro caso não for cadastrado no banco
+                alert("Erro ao cadastrar banner no banco.");
+                mudarDePagina("../partes/visualizarBanners.php");
+                unlink($path); //Apaga a imagem, pois não subiu para o banco
+                die();
+            }
             unset($_POST['enviado']);
+            mudarDePagina("../partes/visualizarBanners.php");
         }
+
     ?>
     <form action="" method="post" enctype="multipart/form-data">
         <div>
@@ -36,7 +65,10 @@
         <br>
         <div>
             <label for="data_fim">Selecione a data final para exibição</label>
-            <input required id="data_fim" type="date" format="dd/mm/yyyy" name="data_fim"s>
+            <?php
+            $dt_get = date('Y-m-d', time() + 86400);
+            echo "<input required id='data_fim' type='date' min='$dt_get'  name='data_fim'>";
+            ?>                                              
         </div>
         <br>
         <div>
@@ -58,6 +90,7 @@
         <div>
             <label for="arquivo">Selecione a imagem: </label>
             <input required id="arquivo" name="arquivo" type="file">
+            
         </div>
         <br>
         <input name="enviado" type="submit" value="Enviar Dados">

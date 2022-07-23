@@ -17,11 +17,18 @@
                     <div class="carousel-inner">
                     <?php
                     include '../auxiliar/conexao.php';
-                    $banners = getAll("banner");
+                    $banners = showBanners();
                     foreach ($banners as $banner) {
-                        $path = $banner[4];
+                        $path_para_imagem = $banner[4];
+                        $path_para_redirecionar = $banner[2];
+                        $target = '_blank';
+                        if ($banner[3] == 'n') {
+                            $target = "";
+                        }
                         echo "<div class='carousel-item active'>
-                                <img src='$path' class='d-block w-100' alt='...'>
+                                <a href='$path_para_redirecionar' target='$target'>
+                                    <img src='$path_para_imagem' class='d-block w-100' alt='...'>
+                                </a>
                               </div>";
                     }
                     ?>

@@ -17,6 +17,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
+                <th>Ordem</th>
                 <th>Data Inicial de Exibição</th>
                 <th>Data Final de Exibição</th>
                 <th>Edição</th>
@@ -25,15 +26,19 @@
         <tbody>
             <?php
             include '../auxiliar/conexao.php';
-            $banners = getAll('banner');
+            $banners = getAll("banner");
             foreach ($banners as $banner) {
                 $id = $banner[0];
                 $nome = $banner[1];
-                $dt_ini = $banner[6];
-                $dt_fim = $banner[7];
+                $data_ini = date_create($banner[6]);
+                $dt_ini = date_format($data_ini,'d/m/Y');
+                $data_fim = date_create($banner[7]);
+                $dt_fim = date_format($data_fim,'d/m/Y');
+                $sequencia = $banner[5];
             echo "<tr>
                 <td>$id</td>
                 <td>$nome</td>
+                <td>$sequencia</td>
                 <td>$dt_ini</td>
                 <td>$dt_fim</td>
                 <td>
