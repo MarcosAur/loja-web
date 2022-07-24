@@ -13,11 +13,13 @@
     <div class="container-sm">
         <div class="row mt-5 mb-5">
             <div class="col">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
+                    
                     <?php
                     include '../auxiliar/conexao.php';
                     $banners = showBanners();
+                    $primeiro = true;
                     foreach ($banners as $banner) {
                         $path_para_imagem = $banner[4];
                         $path_para_redirecionar = $banner[2];
@@ -25,12 +27,23 @@
                         if ($banner[3] == 'n') {
                             $target = "";
                         }
-                        echo "<div class='carousel-item active'>
-                                <a href='$path_para_redirecionar' target='$target'>
-                                    <img src='$path_para_imagem' class='d-block w-100' alt='...'>
-                                </a>
-                              </div>";
+                        if($primeiro){
+                            echo "<div class='carousel-item active'>
+                            <a href='$path_para_redirecionar' target='$target'>
+                                <img src='$path_para_imagem' class='d-block w-100' alt='...'>
+                            </a>
+                          </div>";
+                          $primeiro = false;
+                        }else {
+                            echo "<div class='carousel-item'>
+                            <a href='$path_para_redirecionar' target='$target'>
+                                <img src='$path_para_imagem' class='d-block w-100' alt='...'>
+                            </a>
+                          </div>";
+                        }
+
                     }
+                    
                     ?>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
