@@ -30,8 +30,10 @@
     <div class="container-fluid bg-secondary">
         <div class="row">
             <div class="col-xs-12 col-sm-1">
-                <img class="" src="../img/android-chrome-192x192.png" width="80px">
-            </div> <!-- Fim da div col ícone--> 
+				<a href="#">
+                	<img class="" src="../img/android-chrome-192x192.png" width="80px">
+				</a>
+			</div> <!-- Fim da div col ícone--> 
             <div class="col-xs-12 col-sm-2 mt-3">
                 <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar">

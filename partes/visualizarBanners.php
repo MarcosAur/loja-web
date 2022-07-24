@@ -12,7 +12,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th colspan="5">Banners Cadastrados</th>
+                <th colspan="6">Banners Cadastrados</th>
             </tr>
             <tr>
                 <th>Id</th>

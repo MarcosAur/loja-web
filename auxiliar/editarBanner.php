@@ -11,7 +11,8 @@
         $banner = findBanner($id); //Validar se o banner existe
 
         if ($banner != null) { // Verificação de quais dados foram alterados. Caso não tenha sido enviado o dado do BD permanece
-
+           
+            $str_query = "UPDATE banner SET";
             if(isset($_POST['nome'])){
                 $nome = $_POST['nome'];
             }else{
@@ -47,6 +48,7 @@
             }else{
                 $data_fim = $banner['data_final'];
             }
+            
             //Validar se foi enviada uma nova imagem
             $arquivo = $_FILES['arquivo'];
             if ($arquivo['size'] != 0) {
@@ -62,6 +64,7 @@
                 echo "<script> alert('Registro não alterado');</script>";
             }
             unset($_POST['enviado']);
+            
         }
     }
     
@@ -86,7 +89,7 @@
         <br>
         <div>
             <label for="link">Link de Redirecionamento</label>
-            <input  id="link" name="link" type="text">
+            <input  id="link" name="link" type="text" value="teste">
         </div>
         <br>
         <div>
@@ -96,7 +99,7 @@
         <br>
         <div>
             <label for="data_fim">Selecione a data final para exibição</label>
-            <input  id="data_fim" type="date" format="dd/mm/yyyy" name="data_fim"s>
+            <input  id="data_fim" type="date" value='12122000' name="data_fim">
         </div>
         <br>
         <div>
