@@ -81,52 +81,54 @@
     <title>Cadastrar Banner</title>
 </head>
 <body>
-    <form action="" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="nome">Nome do Banner</label>
-            <input  id="nome" name="nome" type="text">
-        </div>
-        <br>
-        <div>
-            <label for="link">Link de Redirecionamento</label>
-            <input  id="link" name="link" type="text" value="teste">
-        </div>
-        <br>
-        <div>
-            <label for="data_inicio">Selecione a data de inicio de exibição do banner</label>
-            <input  id="data_inicio" type="date" name="data_inicio">
-        </div>
-        <br>
-        <div>
-            <label for="data_fim">Selecione a data final para exibição</label>
-            <input  id="data_fim" type="date" value='12122000' name="data_fim">
-        </div>
-        <br>
-        <div>
-            <label for="sequencia">Selecione a posição que o banner deve aparecer</label>
-            <input  type="number" id="sequencia" name="sequencia">
-        </div>
-        <div>
-            <label for="nova_janela">Abre outra página?</label>
-            <div>
-                <label for="rd_sim">Sim</label>
-                <input  id="rd_sim" value="s" name="nova_janela" type="radio">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2 class="d-flex justify-content-center">Editar Banners</h2>
+            <div class="col-md-6">
+                <form class="row g-2" action="" method="post" enctype="multipart/form-data">
+                    <div class="col-md-12" >
+                        <label class="form-label" for="nome">Nome do Banner</label>
+                        <input  class="form-control" id="nome" name="nome" type="text">
+                    </div>
+                    <div class="col-md-12" >
+                        <label class="form-label" for="link">Link de Redirecionamento</label>
+                        <input  class="form-control" id="link" name="link" type="text" value="teste">
+                    </div>
+                    <div class="col-md-6" >
+                        <label class="form-label" for="data_inicio">Selecione a data de inicio de exibição</label>
+                        <input  class="form-control" id="data_inicio" type="date" name="data_inicio">
+                    </div>
+                    <div class="col-md-6" >
+                        <label class="form-label" for="data_fim">Selecione a data final para exibição</label>
+                        <input  class="form-control" id="data_fim" type="date" value='12122000' name="data_fim">
+                    </div>
+                    <div class="col-md-12" >
+                        <label class="form-label" for="sequencia">Selecione a posição que o banner deve aparecer</label>
+                        <input  class="form-control" type="number" id="sequencia" name="sequencia">
+                    </div>
+                    <div class="col-md-12" >
+                        <label class="form-label" for="nova_janela">Abre outra página?</label>
+                        <div class="col-md-12" >
+                            <label class="form-check-label" for="rd_sim">Sim</label>
+                            <input class="form-check-input" id="rd_sim" value="s" name="nova_janela" type="radio">
+                        </div>
+                        <div class="col-md-12" >
+                            <label class="form-check-label" for="rd_sim">Não</label>
+                            <input class="form-check-input" id="rd_sim" name="nova_janela" value="n" type="radio">
+                        </div>
+                    </div>
+                    <div class="col-md-12" >
+                        <label class="form-label" for="arquivo">Selecione a imagem: </label>
+                        <input  class="form-control" id="arquivo" name="arquivo" type="file">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="form-control col-md-4 mt-3" name="enviado" type="submit" value="Enviar Dados">
+                    </div>
+                </form>
+                <a href="/partes/visualizarBanners.php"><button class="btn btn-warning">View Banners</button></a>
             </div>
-            <div>
-                <label for="rd_sim">Não</label>
-                <input  id="rd_sim" name="nova_janela" value="n" type="radio">
-            </div>
         </div>
-        <br>
-        <div>
-            <label for="arquivo">Selecione a imagem: </label>
-            <input  id="arquivo" name="arquivo" type="file">
-        </div>
-        <br>
-        <input name="enviado" type="submit" value="Enviar Dados">
-    </form>
-    <br>
-    <a href="/partes/visualizarBanners.php"><button>View Banners</button></a>
+    </div>
 </body>
 </html>
 

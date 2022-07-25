@@ -12,25 +12,34 @@
         include './topo.php';
     ?>
     <div class="container mt-5">
-        <div class="row mb-5 mx-auto align-item-center">
+        <div class="row mb-1 mx-auto align-item-center">
             <div class="col d-flex justify-content-center">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="../img/white (1).png&bold" class="img-fluid rounded-start" alt="...">
+                            <img src="http://via.placeholder.com/300" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-warning">Excluir item</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                <h5 class="card-title">Nome do item</h5>
+                                <p class="preco-carrinho pt-2">R$ 500</p>
+                                <label for="qntd" value="1">Quantidade</label>
+                                <input type="number" name="qntd" class="qntd-carrinho">
+                                <a href="#" class="btn btn-danger">Excluir item</a>
+                            </div> <!-- Final da div card-body-->
+                        </div> <!-- Final da div card (col)-->
+                    </div> <!-- Final da div card (row)-->
+                </div> <!-- final da div card -->
+            </div> <!-- Final da div col-->
+        </div> <!-- Final da div row-->
+        <div class="row mx-auto align-item center">
+            <div class="col d-flex justify-content-center mb-3">
+                <a href="#" class="btn btn-warning">
+                    Finalizar compra
+                </a>
             </div>
-        </div>
-    </div>
+        </div> <!-- Fim da div row-->
+    </div> <!-- Final da div container -->
 </body>
 <footer>
     <?php
