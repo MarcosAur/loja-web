@@ -6,10 +6,10 @@ troca nos parâmetros de login no banco.
 */
 
 function createConn(){
-    $host = "localhost";
+    $host = "database-lojaweb.cwnsbwsyx2wg.us-east-1.rds.amazonaws.com";
     $db_name = "loja_web";
-    $username = "teste";
-    $password = "1234";
+    $username = "admin";
+    $password = "12345678";
 
     $conn = mysqli_connect($host, $username, $password, $db_name);
 
